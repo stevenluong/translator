@@ -1,0 +1,5 @@
+var config = {
+    id:"",
+    pwd:""
+}
+module.exports = config;

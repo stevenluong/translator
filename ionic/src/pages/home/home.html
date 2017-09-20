@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>Translator</h3>
+    <img [src]="base64Image" *ngIf="base64Image" />
+    <div *ngIf="result">{{result}}</div>
+    <br/>
+    <button ion-button clear (click)="cam()">Cam</button>
+    <br/>
+    <button ion-button clear (click)="uploadImage()">Up</button>
+</ion-content>

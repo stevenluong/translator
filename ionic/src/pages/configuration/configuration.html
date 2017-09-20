@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Configuration</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+    <ion-item>
+        <ion-label floating>Subject</ion-label>
+        <ion-input type="text" [(ngModel)]="subject"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-textarea type="text" [(ngModel)]="message"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Recipient</ion-label>
+        <ion-input type="text" [(ngModel)]="recipient"></ion-input>
+    </ion-item>
+    <button ion-button (click)="update()">Update</button>
+    </ion-list>
+</ion-content>

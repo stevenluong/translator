@@ -1,0 +1,20 @@
+version: '2'
+services:
+    nginx:
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+            - ./data:/nginx/data
+            - ./logs:/nginx/logs
+        restart: always
+        external_links:
+            - apollo_http_1
+            - apollo_ror_1
+            - poseidon_http_1
+            - poseidon_ror_1
+            - poseidon_node_1
+            - hephaistos_ror_1
+            - hephaistos_http_1
+              #- wp1_wordpress_1

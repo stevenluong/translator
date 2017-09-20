@@ -1,0 +1,11 @@
+bower_components/
+node_modules/
+ror/log/
+ror/public/assets/
+ror/vendor/bundle/
+ror/vendor/cache/
+config.js
+*.swp
+*.swo
+
+

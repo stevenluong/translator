@@ -1,0 +1,25 @@
+{
+  "name": "Init",
+  "version": "1.0.0",
+  "license": "",
+  "repository": "https://github.com/stevenluong/init",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-animate": "1.4.x",
+    "angular-resource": "1.4.x",
+    "angular-route": "1.4.x",
+    "bootstrap": "~3.1.1",
+    "bower": "*",
+    "connect": "*",
+    "express": "*",
+    "feedparser": "*",
+    "forever": "*",
+    "http-server": "*",
+    "jquery": "~2.1.1",
+    "querystring": "*",
+    "request": "*",
+    "satellizer": "^0.15.5",
+    "socket.io": "*",
+    "socket.io-client": "*"
+  }
+}
