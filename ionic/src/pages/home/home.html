@@ -9,8 +9,17 @@
 
 <ion-content padding>
     <h3>Translator</h3>
+    <ion-chip>
+        <ion-icon name="heart"></ion-icon>
+        <ion-label color="{{serverKO?'danger':'secondary'}}" >{{serverKO?'Server KO':'Server Online'}}</ion-label>
+    </ion-chip>
+    <br/>
     <img [src]="base64Image" *ngIf="base64Image" />
-    <div *ngIf="result">{{result}}</div>
+    <ion-list>
+        <ion-item>
+            <ion-label *ngIf="result">{{result}}</ion-label>
+        </ion-item>
+    </ion-list>
     <br/>
     <button ion-button clear (click)="cam()">Cam</button>
     <br/>
