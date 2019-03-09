@@ -46,7 +46,6 @@ class App extends Component {
 
     load(e){
         e.preventDefault();
-        console.log("TEST");
         let reader = new FileReader();
         let file = e.target.files[0];
         var image = new Image();
@@ -91,8 +90,13 @@ class App extends Component {
         socket.emit('image', this.state.imagePreviewUrl);
         this.setState({
                     readyToSubmit:false,
+                    status:"uploading file ..."
                 });
 
+    }
+    analyseLocal(e){
+        e.preventDefault();
+        console.log("Local");
     }
     render() {
         let {imagePreviewUrl} = this.state;
@@ -115,6 +119,9 @@ class App extends Component {
                                           )}
                 {this.state.readyToSubmit?<Button type="submit"
                     onClick={(e)=>this.send(e)}>Submit</Button>:""
+                }
+                {this.state.readyToSubmit?<Button type="submit"
+                    onClick={(e)=>this.analyseLocal(e)}>Local</Button>:""
                 }
                 </form>
 

@@ -10,6 +10,19 @@ services:
     #    restart: always
     #networks:
     #    - nginx_default
+    reactjs:
+        build: reactjs/.
+        command: http-server ./build/. -p 80
+        depends_on: 
+            - node
+        #ports:
+        #    - "8001:80"
+        volumes:
+            - ./reactjs/:/reactjs
+            - /reactjs/node_modules
+        restart: always
+        networks:
+            - nginx_default
     node:
         build: node/.
         command: node server.js

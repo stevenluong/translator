@@ -14,7 +14,7 @@ var socket = require('socket.io'),
 
 socket.on('connection', function(connection) {
     socket.emit('status', true);
-    console.log('User Connected');
+    console.log('User Connected: '+connection.id);
     connection.on('message', function(msg){
         console.log(msg);
         socket.emit('message', 'hello from server');
@@ -27,7 +27,7 @@ socket.on('connection', function(connection) {
         })
         .progress(message => {
             console.log(message);
-            socket.emit('progress',message);
+            socket.to(connection.id).emit('progress',message);
         })
             .catch(err => {
                 console.log("err");
@@ -35,7 +35,7 @@ socket.on('connection', function(connection) {
         .then(function(result){
             console.log("result");
             console.log(result.text);
-            socket.emit('result', result.text);
+            socket.to(connection.id).emit('result', result.text);
         })
     });
 });
