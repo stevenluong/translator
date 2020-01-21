@@ -5,7 +5,7 @@ var cors = require('cors');
 var https = require('https');
 var Tesseract = require('tesseract.js')
 var bodyParser = require('body-parser');
-var config = require('./config');
+//var config = require('./config');
 
 var socket = require('socket.io'),
     http = require('http'),

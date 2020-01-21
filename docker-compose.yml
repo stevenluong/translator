@@ -20,7 +20,7 @@ services:
         volumes:
             - ./reactjs/:/reactjs
             - /reactjs/node_modules
-        restart: always
+        #restart: always
         networks:
             - nginx_default
     node:
@@ -35,7 +35,7 @@ services:
             - /node/node_modules
         #ports:
         #    - "3000:3000"
-        restart: always
+        #restart: always
         networks:
             - nginx_default
     loopback:
@@ -46,25 +46,25 @@ services:
             - ./loopback/server/:/loopback/server/
             - ./loopback/client/:/loopback/client/
             - /loopback/node_modules
-        restart: always
+        #restart: always
         #ports:
         #    - "3000:3000"
         networks:
             - nginx_default
-    ionic:
-        build: ionic/.
+        #ionic:
+        #build: ionic/.
         #command: bash -c "npm rebuild node-sass --force && ionic serve --no-interactive --address 0.0.0.0"
-        command: http-server ./platforms/browser/www -p 80
+        #command: http-server ./platforms/browser/www -p 80
         #command: bash -c "ionic cordova run browser --no-interactive --address 0.0.0.0 --nolivereload"
         #depends_on: 
         #    - ror
         #ports:
         #    - "8080:80"
-        volumes:
-            - ./ionic/:/ionic
-        restart: always
-        networks:
-            - nginx_default
+        #volumes:
+        #    - ./ionic/:/ionic
+        #restart: always
+        #networks:
+        #    - nginx_default
         #redis:
         #build: redis/.
         #image: redis
