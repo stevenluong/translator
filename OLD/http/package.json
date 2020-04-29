@@ -15,7 +15,7 @@
     "feedparser": "*",
     "forever": "*",
     "http-server": "*",
-    "jquery": "~2.1.1",
+    "jquery": "~3.5.0",
     "querystring": "*",
     "request": "*",
     "satellizer": "^0.15.5",
